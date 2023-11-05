@@ -6,6 +6,7 @@ function install_dependencies {
 }
 
 function create_structure {
+    local pipewireConfigPath=${HOME}/.config/pipewire/
     echo "  + Creating pipewire config directory"
     mkdir -p ${HOME}/.config/pipewire/
     echo "  + Created $(realpath .config/pipewire)"
@@ -29,9 +30,7 @@ function system_persist_config {
     echo "  + Enabling autostart and starting service now"
     systemctl --user enable pipewire-input-filter-chain.service
     systemctl --user start pipewire-input-filter-chain.service
-
 }
-
 
 function service_status_check {
     echo "  + Checking service status"
