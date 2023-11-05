@@ -20,7 +20,7 @@ function system_persist_config {
     mkdir -p ~/.config/systemd/user/
     echo "  + Created $(realpath .config/systemd/user/)"
 
-    cp ./pipewire-input-filter-chain.service ${HOME}.config/systemd/user/
+    cp ./pipewire-input-filter-chain.service ${HOME}/.config/systemd/user/
     echo "  + Copied file to ${HOME}/.config/systemd/user/"
 
     echo "  + Reloading daemon"
