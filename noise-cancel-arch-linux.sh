@@ -27,7 +27,9 @@ function system_persist_config {
     systemctl --user daemon-reload
 
     echo "  + Enabling autostart and starting service now"
-    systemctl --user {enable, start} pipewire-input-filter-chain.service
+    systemctl --user enable pipewire-input-filter-chain.service
+    systemctl --user start pipewire-input-filter-chain.service
+
 }
 
 
